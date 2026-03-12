@@ -49,6 +49,7 @@ public class Piece {
     // TO BE IMPLEMENTED!
     //return a list of every square that is "controlled" by this piece. A square is controlled
     //if the piece capture into it legally.
+    //takes pieace one diagonal square away
     public ArrayList<Square> getControlledSquares(Square [][]board, Square start) {
         ArrayList<Square> moves=new ArrayList<>();
         //check up-left, up-right, down-left, down-right
@@ -74,6 +75,8 @@ public class Piece {
     //returns an arraylist of squares which are legal to move to
     //please note that your piece must have some sort of logic. Just being able to move to every square on the board is not
     //going to score any points.
+    //This gets all the legal moves for the piece
+    //moves anywhere on same color of piece
     public ArrayList<Square> getLegalMoves(Board board, Square start){
         ArrayList<Square> moves=new ArrayList<>();
         for(Square [] row: board.getSquareArray()){
